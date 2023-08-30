@@ -15,7 +15,8 @@ while(True):
                         What would you like to do?
                         [1] Cut Grass
                         [2] Upgrade Tool
-                        [3] Quit
+                        [3] Reset
+                        [4] Quit
                         """))
     if (user_input == 1):
         if (landscaper_data['tools'] == "teeth"):
@@ -44,7 +45,7 @@ while(True):
             landscaper_data['money'] += 250
             
 
-    if (user_input == 2):
+    elif (user_input == 2):
         if (landscaper_data['tools'] == "teeth" and landscaper_data['money'] >= 5):
             print("You upgraded to rusty scissors! You now make $5 cutting grass!")
 
@@ -72,7 +73,12 @@ while(True):
         else:
             print("You can't upgrade at this time. Come back later.")
 
-    if (user_input == 3):
+    elif (user_input == 3):
+        print("You reset the game! Everything has been set back to starting attributes!")
+        landscaper_data['money'] = 0
+        landscaper_data['tools'] = "teeth"
+
+    elif (user_input == 4):
         landscaper_data['quit'] = True
 
     if (landscaper_data['quit'] is True):
