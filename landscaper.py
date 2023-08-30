@@ -32,6 +32,11 @@ while(True):
             print(f"You made $50 cutting grass using the push mower! You now have ${landscaper_data['money']}.")
             
             landscaper_data['money'] += 50
+
+        elif (landscaper_data['tools'] == "electric mower"):
+            print(f"You made $100 cutting grass using the electric mower! You now have ${landscaper_data['money']}.")
+
+            landscaper_data['money'] += 100
             
 
     if (user_input == 2):
