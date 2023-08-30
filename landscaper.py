@@ -19,12 +19,20 @@ while(True):
                         """))
     if (user_input == 1):
         if (landscaper_data['tools'] == "teeth"):
-            landscaper_data['money'] += 1
             print(f"You made $1 cutting grass with your teeth! You now have ${landscaper_data['money']}.")
+
+            landscaper_data['money'] += 1
         
-        if (landscaper_data['tools'] == "rusty scissors"):
-            landscaper_data['money'] += 5
+        elif (landscaper_data['tools'] == "rusty scissors"):
             print(f"You made $5 cutting grass using the rusty scissors! You now have ${landscaper_data['money']}.")
+
+            landscaper_data['money'] += 5
+
+        elif (landscaper_data['tools'] == "push mower"):
+            print(f"You made $50 cutting grass using the push mower! You now have ${landscaper_data['money']}.")
+            
+            landscaper_data['money'] += 50
+            
 
     if (user_input == 2):
         if (landscaper_data['tools'] == "teeth" and landscaper_data['money'] >= 5):
