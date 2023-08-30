@@ -32,6 +32,13 @@ while(True):
 
             landscaper_data['money'] -= 5
             landscaper_data['tools'] = "rusty scissors"
+
+        elif (landscaper_data['tools'] == "rusty scissors" and landscaper_data['money'] >= 25):
+            print("You upgraded to the push lawnmower! You now make $50 cutting grass!")
+
+            landscaper_data['money'] -= 25
+            landscaper_data['tools'] = "push mower"
+
         else:
             print("You can't upgrade at this time. Come back later.")
 
@@ -42,6 +49,6 @@ while(True):
         print("You quit the game!")
         break
 
-    if (landscaper_data['money'] >= 10):
+    if (landscaper_data['money'] >= 1000):
         print("You win")
         break
