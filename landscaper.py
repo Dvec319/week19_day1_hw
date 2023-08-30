@@ -79,6 +79,6 @@ while(True):
         print("You quit the game!")
         break
 
-    if (landscaper_data['money'] >= 1000):
-        print("You win")
+    if (landscaper_data['money'] >= 1000 and landscaper_data['tools'] == "team"):
+        print("You made at least $1000 and have a team of students. Congratulations, you win!")
         break
