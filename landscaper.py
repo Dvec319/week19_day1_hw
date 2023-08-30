@@ -58,6 +58,12 @@ while(True):
             landscaper_data['money'] -= 250
             landscaper_data['tools'] = "electric mower"
 
+        elif (landscaper_data['tools'] == "electric mower" and landscaper_data['money'] >= 500):
+            print("You upgraded to the team of starving students! You now make $250 cutting grass!")
+
+            landscaper_data['money'] -= 500
+            landscaper_data['tools'] = "team"
+
         else:
             print("You can't upgrade at this time. Come back later.")
 
