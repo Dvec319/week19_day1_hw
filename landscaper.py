@@ -2,6 +2,10 @@
 
 print("Welcome to Landscaper!")
 
+player = input("What is your name? ")
+
+print(f"Hello {player}. Ready to start?")
+
 landscaper_data = {
     "money": 0,
     "tools": "teeth",
@@ -81,9 +85,12 @@ while(True):
     elif (user_input == 4):
         landscaper_data['quit'] = True
 
-    if (landscaper_data['quit'] is True):
+    elif (landscaper_data['quit'] is True):
         print("You quit the game!")
         break
+
+    else:
+        print("You didn't select a listed option. Please try again.")
 
     if (landscaper_data['money'] >= 1000 and landscaper_data['tools'] == "team"):
         print("You made at least $1000 and have a team of students. Congratulations, you win!")
